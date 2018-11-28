@@ -1,0 +1,22 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rtail
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rtail
+  template:
+    metadata:
+      labels:
+        app: rtail
+    spec:
+      containers:
+      - name: rtail
+        image: jaeyo/rtail:latest
+        ports:
+        - containerPort: 8888
+        - containerPort: 9999
+
