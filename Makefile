@@ -6,5 +6,6 @@ build:
 
 .PHONY: push
 push:
+	@echo "+ $@"
 	@docker push jaeyo/rtail:latest
 
