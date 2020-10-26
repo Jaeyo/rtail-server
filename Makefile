@@ -1,4 +1,5 @@
 
+.PHONY: build
 build:
 	@docker build -t jaeyo/rtail .
 
