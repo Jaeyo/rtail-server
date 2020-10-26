@@ -4,8 +4,12 @@ build:
 	@echo "+ $@"
 	@docker build -t jaeyo/rtail .
 
+define push
+docker push $(1)
+endef
+
 .PHONY: push
 push:
 	@echo "+ $@"
-	@docker push jaeyo/rtail:latest
+	@$(call push,"jaeyo/rtail:latest")
 
